@@ -354,6 +354,10 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
+	// Sortable starts auto-scrolling when the pointer is within this many px of an
+	// edge. The default (30px) is too narrow to reach buckets that are off screen
+	// on the right, so dragging near the edge of the board would never scroll it.
+	scrollSensitivity: 100,
 } as const
 
 const MIN_SCROLL_HEIGHT_PERCENT = 0.25
